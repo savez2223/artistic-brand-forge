@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep catalog content in `src/data` and access it through service helpers so a future persistent catalog can replace static data without rewriting the presentation.
