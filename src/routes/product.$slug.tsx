@@ -3,11 +3,8 @@ import { ChevronRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/Button";
 import { ExtraFeatures } from "@/components/ExtraFeatures";
 import { PaymentStrip } from "@/components/PaymentStrip";
-import { ProductCard } from "@/components/ProductCard";
-import { SectionHeading } from "@/components/SectionHeading";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { WHATSAPP_NUMBER } from "@/config/contact";
-import { getProductBySlug, getRelatedProducts } from "@/services/productService";
+import { getProductBySlug } from "@/services/productService";
 
 export const Route = createFileRoute("/product/$slug")({
   loader: ({ params }) => {
@@ -66,11 +63,6 @@ function ProductPage() {
             <h1 className="mt-4 font-display text-4xl leading-tight sm:text-6xl">{product.name}</h1>
             <div className="mt-5 flex items-baseline gap-3">
               <span className="text-2xl">₹{product.price.toLocaleString("en-IN")}</span>
-              {product.oldPrice && (
-                <span className="text-sm text-muted-foreground line-through">
-                  ₹{product.oldPrice.toLocaleString("en-IN")}
-                </span>
-              )}
             </div>
             <a href={enquiry} target="_blank" rel="noreferrer">
               <Button className="mt-7 w-full">
@@ -81,22 +73,7 @@ function ProductPage() {
             <ExtraFeatures />
           </div>
         </div>
-        <section className="pt-20 lg:pt-28">
-          <SectionHeading eyebrow="Complete the story" title="Related pieces" />
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
-            {getRelatedProducts(product.relatedProducts).map((item) => (
-              <ProductCard key={item.id} product={item} />
-            ))}
-          </div>
-        </section>
-        <section className="py-20 lg:py-28">
-          <SectionHeading eyebrow="Client notes" title="Reviews" />
-          <div className="border border-border p-8 text-center text-sm text-muted-foreground">
-            Be the first to share your experience with this piece.
-          </div>
-        </section>
       </div>
-      <WhatsAppButton productName={product.name} />
     </>
   );
 }
