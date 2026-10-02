@@ -9,6 +9,7 @@ const nav = [
   { label: "Home", to: "/" },
   { label: "About us", to: "/about" },
   { label: "Shop", to: "/shop" },
+  { label: "Replacement Pods", to: "/replacement-pods" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -24,7 +25,7 @@ export function SiteHeader() {
             type="button"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
-            className="grid h-11 w-11 place-items-center text-white transition-colors hover:text-red-500 lg:hidden"
+            className="grid h-11 w-11 place-items-center text-foreground transition-colors hover:text-primary lg:hidden"
           >
             <Menu className="h-6 w-6" />
           </button>
@@ -40,14 +41,14 @@ export function SiteHeader() {
           </Link>
 
           <nav className="hidden items-center justify-center gap-8 lg:flex">
-            {nav.slice(0, 3).map((item) => (
+            {nav.slice(0, 4).map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 activeProps={{
-                  className: "text-red-500",
+                  className: "text-primary",
                 }}
-                className="text-[12px] font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:text-red-500"
+                className="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-200 hover:text-foreground"
               >
                 {item.label}
               </Link>
@@ -55,7 +56,7 @@ export function SiteHeader() {
 
             <Link
               to="/categories"
-              className="flex items-center gap-1 text-[12px] font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:text-red-500"
+              className="flex items-center gap-1 text-[12px] font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-200 hover:text-foreground"
             >
               Categories
               <ChevronDown className="h-4 w-4" />
@@ -63,7 +64,7 @@ export function SiteHeader() {
 
             <Link
               to="/brands"
-              className="flex items-center gap-1 text-[12px] font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:text-red-500"
+              className="flex items-center gap-1 text-[12px] font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-200 hover:text-foreground"
             >
               Brands
               <ChevronDown className="h-4 w-4" />
@@ -71,7 +72,7 @@ export function SiteHeader() {
 
             <Link
               to="/contact"
-              className="text-[12px] font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:text-red-500"
+              className="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-200 hover:text-foreground"
             >
               Contact
             </Link>
@@ -81,7 +82,7 @@ export function SiteHeader() {
             type="button"
             onClick={() => setSearchOpen(!searchOpen)}
             aria-label="Search catalog"
-            className="grid h-11 w-11 place-items-center justify-self-end text-white transition-colors duration-200 hover:text-red-500"
+            className="grid h-11 w-11 place-items-center justify-self-end text-foreground transition-colors duration-200 hover:text-primary"
           >
             <Search className="h-5 w-5" />
           </button>
@@ -93,13 +94,13 @@ export function SiteHeader() {
               action="/shop"
               className="mx-auto flex max-w-2xl items-center border-b border-white/20"
             >
-              <Search className="h-4 w-4 shrink-0 text-red-500" />
+              <Search className="h-4 w-4 shrink-0 text-primary" />
 
               <input
                 name="q"
                 autoFocus
                 placeholder="Search products, brands or categories"
-                className="h-12 w-full bg-transparent px-4 text-sm text-white outline-none placeholder:text-white/50"
+                className="h-12 w-full bg-transparent px-4 text-sm text-foreground outline-none placeholder:text-muted-foreground"
               />
             </form>
           </div>

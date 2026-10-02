@@ -3,6 +3,10 @@ import { ArrowRight, BadgeCheck, Headphones, ShieldCheck, Sparkles } from "lucid
 
 import heroImage from "../assets/Hero-main.png";
 import editorialImage from "@/assets/show-gredi-editorial.jpg";
+import elfBarCategoryImage from "@/assets/Hero-main.png";
+import uwellCategoryImage from "@/assets/show-gredi-hero.jpg";
+import podSaltCategoryImage from "@/assets/show-gredi-editorial.jpg";
+import iGetCategoryImage from "@/assets/Logo.png";
 
 import { Button } from "@/components/Button";
 import { ProductCard } from "@/components/ProductCard";
@@ -44,6 +48,12 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
+  const categoryImages = [
+    elfBarCategoryImage,
+    uwellCategoryImage,
+    podSaltCategoryImage,
+    iGetCategoryImage,
+  ];
   const tickerItems = [
     "⚡ Same Day Delivery",
     "🚚 48-Hour Fast Delivery",
@@ -189,7 +199,7 @@ function HomePage() {
           />
 
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4">
-            {categories.map((category) => (
+            {categories.map((category, index) => (
               <Link
                 key={category.name}
                 to="/shop"
@@ -197,7 +207,7 @@ function HomePage() {
                 className="group relative aspect-[4/5] overflow-hidden border border-border"
               >
                 <img
-                  src={category.image}
+                  src={categoryImages[index]}
                   alt={category.name}
                   loading="lazy"
                   width={800}
@@ -209,7 +219,7 @@ function HomePage() {
 
                 <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
                   <p className="text-[9px] uppercase tracking-[0.18em] text-red-500">
-                    {category.description}
+                    Premium collection
                   </p>
 
                   <h3 className="mt-1 font-display text-xl text-white sm:text-3xl">

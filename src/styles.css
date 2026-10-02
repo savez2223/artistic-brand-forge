@@ -65,6 +65,9 @@
   --color-primary-bright: var(--primary-bright);
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
+  --color-payment-visa: var(--payment-visa);
+  --color-payment-amex: var(--payment-amex);
+  --color-payment-discover: var(--payment-discover);
   --shadow-luxe: var(--shadow-luxe);
 }
 
@@ -78,23 +81,26 @@
   --card-foreground: oklch(0.96 0.008 84);
   --popover: oklch(0.12 0.005 70);
   --popover-foreground: oklch(0.96 0.008 84);
-  --primary: oklch(0.72 0.12 78);
-  --primary-bright: oklch(0.8 0.13 82);
+  --primary: oklch(0.74 0.07 82);
+  --primary-bright: oklch(0.82 0.08 84);
   --primary-foreground: oklch(0.12 0.01 70);
   --secondary: oklch(0.14 0.006 70);
   --secondary-foreground: oklch(0.96 0.008 84);
   --muted: oklch(0.18 0.008 70);
   --muted-foreground: oklch(0.68 0.012 75);
-  --accent: oklch(0.2 0.025 75);
-  --accent-foreground: oklch(0.9 0.03 80);
+  --accent: oklch(0.22 0.008 70);
+  --accent-foreground: oklch(0.92 0.008 80);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.29 0.025 75 / 62%);
-  --border-bright: oklch(0.62 0.1 78);
+  --border: oklch(0.3 0.008 70 / 68%);
+  --border-bright: oklch(0.53 0.035 78);
   --input: oklch(0.25 0.012 70);
   --ring: oklch(0.72 0.12 78);
   --success: oklch(0.62 0.16 145);
   --success-foreground: oklch(0.98 0 0);
+  --payment-visa: oklch(0.32 0.1 278);
+  --payment-amex: oklch(0.56 0.16 250);
+  --payment-discover: oklch(0.35 0.01 70);
   --shadow-luxe: 0 18px 50px oklch(0.03 0 0 / 50%);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);

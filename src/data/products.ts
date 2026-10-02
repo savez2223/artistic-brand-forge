@@ -3,6 +3,7 @@ import editorialImage from "../assets/show-gredi-editorial.jpg";
 
 export type Product = {
   id: number;
+  sku: string;
   name: string;
   slug: string;
   price: number;
@@ -25,6 +26,7 @@ export type Product = {
 export const products: Product[] = [
   {
     id: 1,
+    sku: "SG-ELF-001",
     name: "Noir Weekender",
     slug: "noir-weekender",
     price: 12999,
@@ -51,13 +53,14 @@ export const products: Product[] = [
   },
   {
     id: 2,
+    sku: "SG-UWL-002",
     name: "Aureus Chronograph",
     slug: "aureus-chronograph",
     price: 8499,
     description:
       "A precise black-dial chronograph with a confident profile and considered detailing.",
     shortDescription: "Black chronograph with polished gold accents.",
-    category: "Watches",
+    category: "Uwell",
     brand: "Maison Gredi",
     image: heroImage,
     gallery: [heroImage, editorialImage],
@@ -76,6 +79,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
+    sku: "SG-PSL-003",
     name: "Amber No. 07",
     slug: "amber-no-07",
     price: 4999,
@@ -83,7 +87,7 @@ export const products: Product[] = [
     description:
       "A warm, enigmatic fragrance layered with amber, woods and a quiet trace of spice.",
     shortDescription: "An elegant amber and dark-woods fragrance.",
-    category: "Fragrance",
+    category: "Pod Salt",
     brand: "Gredi Parfums",
     image: editorialImage,
     gallery: [editorialImage, heroImage],
@@ -102,13 +106,14 @@ export const products: Product[] = [
   },
   {
     id: 4,
+    sku: "SG-IGT-004",
     name: "Obsidian Aviator",
     slug: "obsidian-aviator",
     price: 3299,
     description:
       "Architectural aviators with deep charcoal lenses and a lightweight gold-tone frame.",
     shortDescription: "Dark-lens aviators with a refined gold frame.",
-    category: "Eyewear",
+    category: "IGET",
     brand: "Noir House",
     image: heroImage,
     gallery: [heroImage, editorialImage],
@@ -122,6 +127,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
+    sku: "SG-ELF-005",
     name: "Sovereign Loafers",
     slug: "sovereign-loafers",
     price: 7499,
@@ -129,7 +135,7 @@ export const products: Product[] = [
     description:
       "Hand-finished black loafers with a softly structured upper and signature hardware.",
     shortDescription: "Polished black loafers made for formal ease.",
-    category: "Footwear",
+    category: "Elf Bar",
     brand: "Gredi Atelier",
     image: editorialImage,
     gallery: [editorialImage, heroImage],
@@ -148,13 +154,14 @@ export const products: Product[] = [
   },
   {
     id: 6,
+    sku: "SG-UWL-006",
     name: "Midnight Clutch",
     slug: "midnight-clutch",
     price: 5999,
     description:
       "A sharp evening silhouette finished with a discreet magnetic closure and satin lining.",
     shortDescription: "Minimal evening clutch with satin lining.",
-    category: "Bags",
+    category: "Uwell",
     brand: "Noir House",
     image: editorialImage,
     gallery: [editorialImage, heroImage],
@@ -173,12 +180,13 @@ export const products: Product[] = [
   },
   {
     id: 7,
+    sku: "SG-PSL-007",
     name: "Imperial Link",
     slug: "imperial-link",
     price: 2799,
     description: "A sculptural chain bracelet with bold proportions and a softly brushed finish.",
     shortDescription: "Sculptural brushed-gold chain bracelet.",
-    category: "Jewellery",
+    category: "Pod Salt",
     brand: "Maison Gredi",
     image: heroImage,
     gallery: [heroImage, editorialImage],
@@ -197,13 +205,14 @@ export const products: Product[] = [
   },
   {
     id: 8,
+    sku: "SG-IGT-008",
     name: "Élan Handbag",
     slug: "elan-handbag",
     price: 10999,
     description:
       "An impeccably proportioned top-handle bag with a quiet, enduring sense of luxury.",
     shortDescription: "Structured top-handle bag with timeless proportions.",
-    category: "Bags",
+    category: "IGET",
     brand: "Gredi Atelier",
     image: editorialImage,
     gallery: [editorialImage, heroImage],
