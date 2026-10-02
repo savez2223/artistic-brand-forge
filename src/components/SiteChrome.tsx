@@ -9,6 +9,7 @@ const nav = [
   { label: "Home", to: "/" },
   { label: "About us", to: "/about" },
   { label: "Shop", to: "/shop" },
+  { label: "Replacement Pods", to: "/replacement-pods" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -40,7 +41,7 @@ export function SiteHeader() {
           </Link>
 
           <nav className="hidden items-center justify-center gap-8 lg:flex">
-            {nav.slice(0, 3).map((item) => (
+            {nav.slice(0, 4).map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
