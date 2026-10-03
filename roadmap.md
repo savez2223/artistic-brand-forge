@@ -1,9 +1,8 @@
 # Roadmap
 
-- [x] Simplify product cards to image, name, and main price
-- [x] Add contained image zoom and concise product details
-- [x] Replace categories with Elf Bar, Uwell, Pod Salt, and IGET using index-owned images
-- [x] Add a separate Replacement Pods catalog and data source
-- [x] Add the safe checkout payment strip and shared extra features
-- [x] Rebalance the palette with restrained gold accents
-- [x] Verify desktop and mobile flows
+- [ ] Update WhatsApp product-order message with full product URL
+- [ ] Simplify catalog records to requested fields and split them by category
+- [ ] Merge brand and category navigation using the supplied brand list
+- [ ] Restrict related products to the same category
+- [ ] Rebalance the product page for smaller imagery and long names
+- [ ] Restore related-product cards and verify desktop/mobile flows
