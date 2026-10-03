@@ -1,1 +1,1 @@
-export const brands = ["Gredi Atelier", "Maison Gredi", "Gredi Parfums", "Noir House"];
+export { categories as brands } from "@/data/categories";

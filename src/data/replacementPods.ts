@@ -1,10 +1,12 @@
-import heroImage from "@/assets/show-gredi-hero.jpg";
-import editorialImage from "@/assets/show-gredi-editorial.jpg";
-import type { Product } from "@/data/products";
+import elfBarImage from "@/assets/elf.webp";
+import iGetImage from "@/assets/iget.webp";
+import podSaltImage from "@/assets/Pod-salt.webp";
+import uwellImage from "@/assets/uwell.webp";
+import type { Product } from "@/data/productTypes";
 
 export const replacementPods: Product[] = [
-  { id: 101, sku: "SG-RP-101", name: "Caliburn Replacement Pod", slug: "caliburn-replacement-pod", price: 899, description: "", shortDescription: "Caliburn replacement pod.", category: "Replacement Pods", brand: "Uwell", image: heroImage, gallery: [heroImage], featured: false, bestseller: false, newProduct: false, sale: false, inStock: true, specifications: {}, relatedProducts: [102, 103] },
-  { id: 102, sku: "SG-RP-102", name: "Elf Bar Refillable Pod", slug: "elf-bar-refillable-pod", price: 749, description: "", shortDescription: "Elf Bar refillable pod.", category: "Replacement Pods", brand: "Elf Bar", image: editorialImage, gallery: [editorialImage], featured: false, bestseller: false, newProduct: false, sale: false, inStock: true, specifications: {}, relatedProducts: [101, 104] },
-  { id: 103, sku: "SG-RP-103", name: "Pod Salt Replacement Cartridge", slug: "pod-salt-replacement-cartridge", price: 699, description: "", shortDescription: "Pod Salt replacement cartridge.", category: "Replacement Pods", brand: "Pod Salt", image: heroImage, gallery: [heroImage], featured: false, bestseller: false, newProduct: false, sale: false, inStock: true, specifications: {}, relatedProducts: [101, 104] },
-  { id: 104, sku: "SG-RP-104", name: "IGET Replacement Pod", slug: "iget-replacement-pod", price: 799, description: "", shortDescription: "IGET replacement pod.", category: "Replacement Pods", brand: "IGET", image: editorialImage, gallery: [editorialImage], featured: false, bestseller: false, newProduct: false, sale: false, inStock: true, specifications: {}, relatedProducts: [102, 103] },
+  { id: 101, name: "Caliburn Replacement Pod", sku: "SG-RP-101", image: uwellImage, price: 899, category: "Uwell", bestseller: false, relatedProducts: [4] },
+  { id: 102, name: "Elf Bar Refillable Pod", sku: "SG-RP-102", image: elfBarImage, price: 749, category: "Elf Bar", bestseller: false, relatedProducts: [] },
+  { id: 103, name: "Pod Salt Replacement Cartridge", sku: "SG-RP-103", image: podSaltImage, price: 699, category: "Pod Salt", bestseller: false, relatedProducts: [1, 2, 3] },
+  { id: 104, name: "IGET Replacement Pod", sku: "SG-RP-104", image: iGetImage, price: 799, category: "IGET", bestseller: false, relatedProducts: [] },
 ];
