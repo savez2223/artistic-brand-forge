@@ -33,7 +33,7 @@ export function SiteHeader() {
           <Link to="/" className="justify-self-center lg:justify-self-start">
             <img
               src={logo}
-              alt="SHOW GREDI"
+              alt="Kota Vape Shop"
               width={1200}
               height={608}
               className="h-16 w-64 object-contain sm:h-20 sm:w-72 lg:h-20 lg:w-80"
@@ -112,7 +112,7 @@ export function SiteHeader() {
           <div className="flex items-center justify-between">
             <img
               src={logo}
-              alt="SHOW GREDI"
+              alt="Kota Vape Shop"
               width={1200}
               height={608}
               className="h-16 w-60 object-contain"
@@ -172,7 +172,7 @@ export function SiteFooter() {
         <div>
           <img
             src={logo}
-            alt="SHOW GREDI"
+            alt="Kota Vape Shop"
             loading="lazy"
             width={1200}
             height={608}
@@ -207,7 +207,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/10 px-4 py-5 text-center text-[10px] uppercase tracking-[0.16em] text-white/50">
-        © 2026 SHOW GREDI. All rights reserved.
+        © 2026 Kota Vape Shop. All rights reserved.
       </div>
     </footer>
   );

@@ -80,11 +80,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SHOW GREDI — Curated Modern Luxury" },
-      { name: "description", content: "Discover considered fashion, accessories, fragrance and objects from SHOW GREDI." },
-      { name: "author", content: "SHOW GREDI" },
-      { property: "og:title", content: "SHOW GREDI — Curated Modern Luxury" },
-      { property: "og:description", content: "Discover considered fashion, accessories, fragrance and objects from SHOW GREDI." },
+      { title: "Kota Vape Shop — Curated Modern Luxury" },
+      {
+        name: "description",
+        content:
+          "Discover considered fashion, accessories, fragrance and objects from Kota Vape Shop.",
+      },
+      { name: "author", content: "Kota Vape Shop" },
+      { property: "og:title", content: "Kota Vape Shop — Curated Modern Luxury" },
+      {
+        property: "og:description",
+        content:
+          "Discover considered fashion, accessories, fragrance and objects from Kota Vape Shop.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -95,7 +103,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap",
+      },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
@@ -125,7 +136,9 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SiteHeader />
-      <main><Outlet /></main>
+      <main>
+        <Outlet />
+      </main>
       <SiteFooter />
       <WhatsAppButton />
     </QueryClientProvider>

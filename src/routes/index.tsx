@@ -3,10 +3,10 @@ import { ArrowRight, BadgeCheck, Headphones, ShieldCheck, Sparkles } from "lucid
 
 import heroImage from "../assets/Hero-main.png";
 import editorialImage from "@/assets/show-gredi-editorial.jpg";
-import elfBarCategoryImage from "@/assets/Hero-main.png";
-import uwellCategoryImage from "@/assets/show-gredi-hero.jpg";
-import podSaltCategoryImage from "@/assets/show-gredi-editorial.jpg";
-import iGetCategoryImage from "@/assets/Logo.png";
+import elfBarCategoryImage from "../assets/elf.webp";
+import uwellCategoryImage from "../assets/uwell.webp";
+import podSaltCategoryImage from "../assets/Pod-salt.webp";
+import iGetCategoryImage from "../assets/iget.webp";
 
 import { Button } from "@/components/Button";
 import { ProductCard } from "@/components/ProductCard";
@@ -19,15 +19,15 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "SHOW GREDI — Premium Vape Store",
+        title: "Kota Vape Shop — Premium Vape Store",
       },
       {
         name: "description",
-        content: "Explore SHOW GREDI's premium collection of authentic vape products.",
+        content: "Explore Kota Vape Shop's premium collection of authentic vape products.",
       },
       {
         property: "og:title",
-        content: "SHOW GREDI — Premium Vape Store",
+        content: "Kota Vape Shop — Premium Vape Store",
       },
       {
         property: "og:description",
@@ -218,10 +218,6 @@ function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
 
                 <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                  <p className="text-[9px] uppercase tracking-[0.18em] text-red-500">
-                    Premium collection
-                  </p>
-
                   <h3 className="mt-1 font-display text-xl text-white sm:text-3xl">
                     {category.name}
                   </h3>

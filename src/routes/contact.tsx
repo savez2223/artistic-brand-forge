@@ -1,5 +1,53 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { CONTACT_EMAIL, CONTACT_PHONE, WHATSAPP_NUMBER } from "@/config/contact";
-export const Route = createFileRoute("/contact")({ head: () => ({ meta: [{ title: "Contact & Concierge — SHOW GREDI" }, { name: "description", content: "Contact the SHOW GREDI concierge for product guidance and enquiries." }, { property: "og:title", content: "Contact & Concierge — SHOW GREDI" }, { property: "og:description", content: "Personal assistance for product enquiries and recommendations." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
-function Page() { const methods = [[MessageCircle,"WhatsApp",WHATSAPP_NUMBER],[Mail,"Email",CONTACT_EMAIL],[Phone,"Phone",CONTACT_PHONE],[MapPin,"Location","India · By appointment"]] as const; return <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24"><div className="max-w-3xl"><p className="text-[10px] uppercase tracking-[0.28em] text-primary">Private concierge</p><h1 className="mt-4 font-display text-5xl leading-tight sm:text-7xl">How may we assist?</h1><p className="mt-6 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">From product details to thoughtful gifting recommendations, our concierge is here to make every choice feel effortless.</p></div><div className="mt-14 grid border-l border-t border-border sm:grid-cols-2">{methods.map(([Icon,label,value]) => <div key={label} className="min-h-48 border-b border-r border-border p-7"><Icon className="h-6 w-6 text-primary" /><p className="mt-8 text-[10px] uppercase tracking-[0.16em] text-muted-foreground">{label}</p><p className="mt-2 font-display text-xl sm:text-2xl">{value}</p></div>)}</div></div>; }
+export const Route = createFileRoute("/contact")({
+  head: () => ({
+    meta: [
+      { title: "Contact & Concierge — Kota Vape Shop" },
+      {
+        name: "description",
+        content: "Contact the Kota Vape Shop concierge for product guidance and enquiries.",
+      },
+      { property: "og:title", content: "Contact & Concierge — Kota Vape Shop" },
+      {
+        property: "og:description",
+        content: "Personal assistance for product enquiries and recommendations.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Page,
+});
+function Page() {
+  const methods = [
+    [MessageCircle, "WhatsApp", WHATSAPP_NUMBER],
+    [Mail, "Email", CONTACT_EMAIL],
+    [Phone, "Phone", CONTACT_PHONE],
+    [MapPin, "Location", "India · By appointment"],
+  ] as const;
+  return (
+    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24">
+      <div className="max-w-3xl">
+        <p className="text-[10px] uppercase tracking-[0.28em] text-primary">Private concierge</p>
+        <h1 className="mt-4 font-display text-5xl leading-tight sm:text-7xl">How may we assist?</h1>
+        <p className="mt-6 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">
+          From product details to thoughtful gifting recommendations, our concierge is here to make
+          every choice feel effortless.
+        </p>
+      </div>
+      <div className="mt-14 grid border-l border-t border-border sm:grid-cols-2">
+        {methods.map(([Icon, label, value]) => (
+          <div key={label} className="min-h-48 border-b border-r border-border p-7">
+            <Icon className="h-6 w-6 text-primary" />
+            <p className="mt-8 text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+              {label}
+            </p>
+            <p className="mt-2 font-display text-xl sm:text-2xl">{value}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

@@ -14,10 +14,10 @@ export const Route = createFileRoute("/product/$slug")({
   },
   head: ({ loaderData }) => {
     const title = loaderData
-      ? `${loaderData.name} — SHOW GREDI`
-      : "Product unavailable — SHOW GREDI";
+      ? `${loaderData.name} — Kota Vape Shop`
+      : "Product unavailable — Kota Vape Shop";
     const description =
-      loaderData?.shortDescription ?? "The requested SHOW GREDI product is unavailable.";
+      loaderData?.shortDescription ?? "The requested Kota Vape Shop product is unavailable.";
     return {
       meta: [
         { title },
@@ -57,8 +57,12 @@ function ProductPage() {
           </div>
           <div className="lg:sticky lg:top-32 lg:self-start">
             <div className="grid grid-cols-2 gap-4 border-b border-border pb-4 text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-              <span>SKU: <b className="text-foreground">{product.sku}</b></span>
-              <span>Category: <b className="text-foreground">{product.category}</b></span>
+              <span>
+                SKU: <b className="text-foreground">{product.sku}</b>
+              </span>
+              <span>
+                Category: <b className="text-foreground">{product.category}</b>
+              </span>
             </div>
             <h1 className="mt-4 font-display text-4xl leading-tight sm:text-6xl">{product.name}</h1>
             <div className="mt-5 flex items-baseline gap-3">
@@ -66,7 +70,7 @@ function ProductPage() {
             </div>
             <a href={enquiry} target="_blank" rel="noreferrer">
               <Button className="mt-7 w-full">
-                <MessageCircle className="h-4 w-4" /> Enquire on WhatsApp
+                <MessageCircle className="h-4 w-4" /> Get on WhatsApp
               </Button>
             </a>
             <PaymentStrip />

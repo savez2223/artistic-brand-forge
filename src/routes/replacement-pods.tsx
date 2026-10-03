@@ -3,14 +3,19 @@ import { ProductCard } from "@/components/ProductCard";
 import { replacementPods } from "@/data/replacementPods";
 
 export const Route = createFileRoute("/replacement-pods")({
-  head: () => ({ meta: [
-    { title: "Replacement Pods — SHOW GREDI" },
-    { name: "description", content: "Shop replacement pods and cartridges at SHOW GREDI." },
-    { property: "og:title", content: "Replacement Pods — SHOW GREDI" },
-    { property: "og:description", content: "A separate collection of replacement pods and cartridges." },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
-  ] }),
+  head: () => ({
+    meta: [
+      { title: "Replacement Pods — Kota Vape Shop" },
+      { name: "description", content: "Shop replacement pods and cartridges at Kota Vape Shop." },
+      { property: "og:title", content: "Replacement Pods — Kota Vape Shop" },
+      {
+        property: "og:description",
+        content: "A separate collection of replacement pods and cartridges.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: ReplacementPodsPage,
 });
 
@@ -23,7 +28,9 @@ function ReplacementPodsPage() {
         <p className="mt-3 text-sm text-muted-foreground">{replacementPods.length} products</p>
       </div>
       <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
-        {replacementPods.map((product) => <ProductCard key={product.id} product={product} />)}
+        {replacementPods.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
       </div>
     </div>
   );

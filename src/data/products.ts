@@ -1,5 +1,9 @@
 import heroImage from "../assets/show-gredi-hero.jpg";
 import editorialImage from "../assets/show-gredi-editorial.jpg";
+import a517 from "../assets/Pod-salt/517.webp";
+import a529 from "../assets/Pod-salt/529.webp";
+import a531 from "../assets/Pod-salt/531.webp";
+import a38 from "../assets/Uwell/38.webp";
 
 export type Product = {
   id: number;
@@ -26,18 +30,18 @@ export type Product = {
 export const products: Product[] = [
   {
     id: 1,
-    sku: "SG-ELF-001",
-    name: "Noir Weekender",
-    slug: "noir-weekender",
-    price: 12999,
+    sku: "517",
+    name: "BANANA ICE – POD SALT NICOTINE SALT",
+    slug: "BANANA ICE – POD SALT NICOTINE SALT",
+    price: 1400.0,
     oldPrice: 15999,
     description:
       "A structured travel companion crafted for polished arrivals and effortless weekends.",
     shortDescription: "Structured black travel bag with refined gold hardware.",
-    category: "Elf Bar",
-    brand: "Gredi Atelier",
-    image: heroImage,
-    gallery: [heroImage, editorialImage],
+    category: "Pod Salt",
+    brand: "Pod Salt",
+    image: a517,
+    gallery: [a517, editorialImage],
     featured: true,
     bestseller: true,
     newProduct: false,
@@ -53,17 +57,17 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    sku: "SG-UWL-002",
-    name: "Aureus Chronograph",
-    slug: "aureus-chronograph",
-    price: 8499,
+    sku: "529",
+    name: "Blueberry Mist POD SALT Nicotine Salt",
+    slug: "Blueberry Mist POD SALT Nicotine Salt",
+    price: 1400,
     description:
       "A precise black-dial chronograph with a confident profile and considered detailing.",
     shortDescription: "Black chronograph with polished gold accents.",
-    category: "Uwell",
-    brand: "Maison Gredi",
-    image: heroImage,
-    gallery: [heroImage, editorialImage],
+    category: "Pod Salt",
+    brand: "Pod Salt",
+    image: a529,
+    gallery: [a529, editorialImage],
     featured: true,
     bestseller: true,
     newProduct: true,
@@ -79,18 +83,18 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    sku: "SG-PSL-003",
-    name: "Amber No. 07",
-    slug: "amber-no-07",
-    price: 4999,
+    sku: "531",
+    name: "Blueberry Pomegranate POD SALT Nicotine Salt",
+    slug: "blueberry-pomegranate-pod-salt-nicotine-salt",
+    price: 1400.0,
     oldPrice: 5799,
     description:
       "A warm, enigmatic fragrance layered with amber, woods and a quiet trace of spice.",
     shortDescription: "An elegant amber and dark-woods fragrance.",
     category: "Pod Salt",
-    brand: "Gredi Parfums",
-    image: editorialImage,
-    gallery: [editorialImage, heroImage],
+    brand: "Pod Salt",
+    image: a531,
+    gallery: [a531, editorialImage],
     featured: true,
     bestseller: false,
     newProduct: false,
@@ -106,17 +110,17 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    sku: "SG-IGT-004",
-    name: "Obsidian Aviator",
-    slug: "obsidian-aviator",
-    price: 3299,
+    sku: "38",
+    name: "Caliburn G2 Pod System Kit",
+    slug: "caliburn-g2-pod-system-kit",
+    price: 1149,
     description:
       "Architectural aviators with deep charcoal lenses and a lightweight gold-tone frame.",
     shortDescription: "Dark-lens aviators with a refined gold frame.",
-    category: "IGET",
-    brand: "Noir House",
-    image: heroImage,
-    gallery: [heroImage, editorialImage],
+    category: "Uwell",
+    brand: "Uwell",
+    image: a38,
+    gallery: [a38, editorialImage],
     featured: false,
     bestseller: true,
     newProduct: false,
